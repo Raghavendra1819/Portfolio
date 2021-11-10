@@ -1,0 +1,216 @@
+@import 'utility.css';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --TERNARY:#898989;
+    --light:#f3c0c0;
+    --secondary:#9db9ee;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+header{
+    background: var(--dark);
+    clip-path:polygon(0 0, 100% 0, 100% 100%,70% 90%, 0 100%);
+}
+.container{
+    max-width:1152px;
+    padding:0 15px;
+    margin:0 auto;
+}
+
+header nav .left a{
+    color:var(--pure);
+    text-decoration: none;
+    margin-right:2rem;
+}
+header nav .left a:hover{
+    color:(var(--primary))
+}
+
+header nav .branding{
+    margin-right:3rem;
+}
+header nav .branding img{
+    border-radius: 50%;
+}
+
+.pic .left img{
+    width:350px; 
+}
+.pic .right{
+    color:var(--pure)
+}
+.pic .right h6{
+    font-size:1.6rem;
+    color:var(--primary);
+    margin-bottom:0.5rem;
+}
+.pic .right h1{
+    line-height: 1.2;
+    font-weight: 100;
+    margin-bottom:2rem;
+}
+.pic .right p{
+    line-height:1.7;
+    margin-bottom: 2rem;
+}
+.pic .right {
+    margin-top: -7rem;
+}
+section{
+    padding: 6rem 0;
+}
+section.about .about-me-img{
+    height: 450px;
+}
+section.about h3 span{
+    color:var(--primary);
+}
+section.about .social{
+    display: flex;
+}
+section.about .social a{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    transition: all .3s ease;
+}
+section.about .social a:hover{
+    background: var(--primary);
+}
+section.about .social a img{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+section.nature-work .section-heading{
+    text-align: center;
+}
+section.nature-work .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem; 
+}
+section.nature-work .card-wrapper .card{
+    position: relative;
+    height: 250px;
+}
+section.nature-work .card-wrapper .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #aae7f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    opacity: 0;
+    transition: all .3s ease;
+}
+section.nature-work .card-wrapper .card:hover .overlay{
+    opacity: 1;
+}
+section.nature-work .card-wrapper .card .overlay a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+section.nature-work .card-wrapper .card img{
+    height: 100%;
+    width: 100%;
+}
+section.contact .input-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+section.contact .container{
+    text-align: center;
+}
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+section.contact .input-wrap-2 input{
+    margin-bottom: 2rem;
+}
+section.contact input{
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+}
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+}
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media(max-width:1050px){
+    header #main-nav{
+        display: none;
+    }
+}
+.site-main-wrapper{
+    position: relative;
+}
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.hamberger img{
+    width: 30px;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--pure);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+}
+.open{
+    transform: translateX(0);
+}
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+}
